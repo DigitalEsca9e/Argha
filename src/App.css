@@ -1,38 +1,67 @@
-.App {
+/* App.css */
+
+/* Reset and global styles */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Navigation bar */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: row;
+}
+.navbar h1{
+  padding: 20px 0px 0px 20px;
+}
+.navbar ul {
+  padding: 2rem 0rem 0rem 10rem;
+  list-style: none;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar li {
+  display: inline;
+  margin-right: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Make the navigation bar responsive */
+@media (max-width: 768px) {
+  .navbar{
+    flex-direction: column;
+  }
+  .navbar ul {
+    padding:10px 0px 0px 20px;
+    text-align: left;
+  }
+
+  .navbar li {
+    display: block;
+    margin-bottom: 10px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Container */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* Make the container responsive */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 10px;
   }
 }
